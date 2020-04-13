@@ -21,20 +21,37 @@ const useStyles = makeStyles(theme => ({
 
   test: {
     color: theme.hueStatus.danger,
+  },
+  title: {
+    color: 'tomato',
+  },
+  subTitle: {
+    color: 'tan',
+    margin:'3rem'
+  },
+  typedContainer: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '100vw',
+    textAlign: 'center',
+    zIndex: 1
   }
 }));
 
 const Header = () => {
   const classes = useStyles();
   return (
-    <Box>
-      <Avatar src={avatar} className={classes.avatar} alt="my avatar" />
-      <Typography variant="h4">
+    <Box className={classes.typedContainer}>
+      <Grid container justify="center">
+        <Avatar src={avatar} className={classes.avatar} alt="my avatar" />
+      </Grid>
+      <Typography className={classes.title} variant="h4">
         <Typed strings={["Michael Chigorin"]} typeSpeed={40} />
       </Typography>
       <br />
-      <Typography className={classes.test} variant="h5">
-        fdsfsfsdfdsf
+      <Typography className={classes.subTitle} variant="h5">
         <Typed 
           strings={["Css & HTML", "React & ContextAPI & Redux", "MERN Stack"]} 
           typeSpeed={40}
