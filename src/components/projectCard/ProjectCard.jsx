@@ -10,7 +10,6 @@ import {
    CardContent,
   } from '@material-ui/core';
 
-import project1 from '../../assets/img/html-css-javascript-lg.jpg';
 
 const useStyles = makeStyles((theme) => ({
   cardContainer: {
@@ -20,8 +19,9 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const ProjectCard = () => {
+const ProjectCard = (props) => {
   const classes = useStyles();
+  const { imgUrl } = props;
 
   return (
     <Card className={classes.cardContainer}>
@@ -30,7 +30,7 @@ const ProjectCard = () => {
         component='img'
         alt='project 1'
         height='140'
-        image={project1}
+        image={imgUrl}
       />
       <CardContent>
         <Typography gutterBottom variant="h5">
