@@ -6,6 +6,7 @@ import ResumePage from './pages/resumePage/ResumePage';
 import { NavBar } from './components';
 import { CssBaseline } from '@material-ui/core';
 import ThemeProvider from './assets/theme/theme';
+import PortfolioPage from './pages/portfolio/PortfolioPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <NavBar />  
         <Route exact path="/" component={HomePage} />
         <Route path="/resume" component={ResumePage} />
+        <Route path="/portfolio" component={PortfolioPage} />
       </ThemeProvider>
     </>
     </Router>
